@@ -1,4 +1,4 @@
-# NEXTJS-HASURA-BASIC
+# NEXTJS-GRAPHQL-DEMO
 
 ## フロントエンド
 
