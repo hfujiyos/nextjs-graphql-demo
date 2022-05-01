@@ -6,6 +6,7 @@
 
 - React.js
 - TypeScript
+- Tailwind CSS
 - React Testing Library
 - JEST
 - JSDoc
