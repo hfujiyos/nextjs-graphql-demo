@@ -24,9 +24,9 @@ const FetchMain: VFC = () => {
         <p>Error: {error.message}</p>
       </Layout>
     )
-  {
-    console.log(data)
-  }
+  // {
+  //   console.log(data)
+  // }
   return (
     <Layout title="Hasura fetchPolicy">
       <p className="mb-6 font-bold">Hasura main page</p>
