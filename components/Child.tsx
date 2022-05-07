@@ -14,7 +14,9 @@ interface Props {
  * Child関数ｺﾝﾎﾟｰﾈﾝﾄ
  * @returns ﾃﾞﾊﾞｯｸﾞ用ﾌﾟﾘﾝﾄﾒｯｾｰｼﾞｺﾝﾎﾟｰﾈﾝﾄ
  * @description Memo化することで受取Propsに変化がなければ再ﾚﾝﾀﾞﾘﾝｸﾞさせない
+ * @description yarn buildでのmissing display nameの無名関数ｴﾗｰ対応のためESLint無効化ｺﾒﾝﾄ導入
  */
+// eslint-disable-next-line react/display-name
 export const Child: VFC<Props> = memo(({ printMsg, handleSubmit }) => {
   return (
     <>
