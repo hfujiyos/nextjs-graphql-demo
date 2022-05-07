@@ -8,19 +8,17 @@ import { Layout } from '../components/Layout'
 
 /**
  * Props型定義
- * @param users 親State
- * @param id ﾕｰｻﾞｰID
- * @param name ﾕｰｻﾞｰﾈｰﾑ
- * @param created_at 作成日
+ * @param users ﾕｰｻﾞｰ一覧情報（getStaticPropsからProps受信）
  */
 interface Props {
   users: ({
     __typename?: 'users'
   } & Pick<Users, 'id' | 'name' | 'created_at'>)[]
 }
+
 /**
  * HasuraSSG関数ｺﾝﾎﾟｰﾈﾝﾄ
- * @param users getStaticPropsからProps受信
+ * @param users ﾕｰｻﾞｰ一覧情報
  */
 const HasuraSSG: VFC<Props> = ({ users }) => {
   return (
@@ -41,15 +39,15 @@ const HasuraSSG: VFC<Props> = ({ users }) => {
 export default HasuraSSG
 
 /**
- * SSGｻｰﾊﾞｰｻｲﾄﾞｺﾝﾎﾟｰﾈﾝﾄ
- * @returns props｜ﾕｰｻﾞｰ情報返却（GraphQL-Read結果ｾｯﾄ）
+ * Propsｻｰﾊﾞｰｻｲﾄﾞｺﾝﾎﾟｰﾈﾝﾄ
+ * @returns props｜ﾕｰｻﾞｰ一覧情報の返却（GraphQL-Read結果ｾｯﾄ）
  * @returns revalidate｜ISR設定（秒単位返却）
  * @description ｱﾌﾟﾘｹｰｼｮﾝﾋﾞﾙﾄﾞ時ｻｰﾊﾞｰｻｲﾄﾞ実行
  */
 export const getStaticProps: GetStaticProps = async () => {
-  // ApolloClient初期化
+  // ApolloClient初期化処理
   const apolloClient = initializeApollo()
-  // GraphQL-Read
+  // GraphQL-Read関数定義（cache反映は自動）
   const { data } = await apolloClient.query<GetUsersQuery>({
     query: GET_USERS,
   })
