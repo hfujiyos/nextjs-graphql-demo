@@ -27,7 +27,7 @@ interface Props {
  * @param setEditedUser 親State更新関数を子が実行、親State更新、親編集ﾓｰﾄﾞ通知
  * @returns ﾕｰｻﾞｰｱｲﾃﾑｺﾝﾎﾟｰﾈﾝﾄ
  * @description Memo化することで受取Propsに変化がなければ再ﾚﾝﾀﾞﾘﾝｸﾞさせない
- * @description yarn buildでのmissing display name error対応のためESLint無効化ｺﾒﾝﾄ導入
+ * @description yarn buildでのmissing display nameの無名関数ｴﾗｰ対応のためESLint無効化ｺﾒﾝﾄ導入
  */
 // eslint-disable-next-line react/display-name
 export const UserItem: VFC<Props> = memo(
