@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="RRw8c92Uo7Scs7MkTA4B" name="ページ1">
-        <mxGraphModel dx="700" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="982" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -8,10 +8,10 @@
                     <mxGeometry x="40" y="440" width="760" height="240" as="geometry"/>
                 </mxCell>
                 <mxCell id="8" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=none;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="40" y="720" width="160" height="280" as="geometry"/>
+                    <mxGeometry x="40" y="720" width="230" height="280" as="geometry"/>
                 </mxCell>
                 <mxCell id="413" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=none;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="200" y="720" width="600" height="280" as="geometry"/>
+                    <mxGeometry x="270" y="720" width="530" height="280" as="geometry"/>
                 </mxCell>
                 <mxCell id="22" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;画面定義書&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;spacingLeft=5;align=center;fontSize=24;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="40" y="40" width="200" height="80" as="geometry"/>
@@ -26,7 +26,7 @@
                 </mxCell>
                 <mxCell id="440" value="DB取得&lt;br style=&quot;font-size: 13px;&quot;&gt;Query" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=13;" parent="414" vertex="1" connectable="0">
                     <mxGeometry x="0.0071" y="1" relative="1" as="geometry">
-                        <mxPoint as="offset"/>
+                        <mxPoint x="-81" y="1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="387" value="&lt;font face=&quot;helvetica&quot; style=&quot;font-size: 13px;&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;Server Side&lt;/span&gt;&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;fontSize=13;fontColor=#000000;" parent="1" vertex="1">
@@ -36,7 +36,7 @@
                     <mxGeometry x="60" y="770" width="120" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="389" value="&lt;font face=&quot;helvetica&quot; style=&quot;font-size: 13px;&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;Client Side&lt;/span&gt;&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;fontSize=13;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="210" y="730" width="100" height="30" as="geometry"/>
+                    <mxGeometry x="290" y="730" width="100" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="416" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" parent="1" source="403" target="405" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -47,7 +47,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="403" value="取得画面&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;span style=&quot;text-align: left; font-size: 13px;&quot;&gt;hasura-main.tsx&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=13;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="380" y="770" width="120" height="80" as="geometry"/>
+                    <mxGeometry x="440" y="770" width="120" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="405" value="cache機能&lt;br style=&quot;font-size: 13px&quot;&gt;apolloClient.ts" style="whiteSpace=wrap;html=1;fontSize=13;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="660" y="770" width="120" height="80" as="geometry"/>
@@ -56,7 +56,7 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="406" value="&lt;span style=&quot;letter-spacing: -0.08px ; text-align: left ; background-color: rgb(255 , 255 , 255) ; font-size: 13px&quot;&gt;プロバイダ&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;letter-spacing: -0.08px ; text-align: left ; background-color: rgb(255 , 255 , 255) ; font-size: 13px&quot;&gt;cache機構&lt;br style=&quot;font-size: 13px&quot;&gt;_app.tsx&lt;/span&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;&lt;br style=&quot;font-size: 13px&quot;&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=13;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="220" y="890" width="120" height="80" as="geometry"/>
+                    <mxGeometry x="290" y="890" width="120" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="417" style="edgeStyle=none;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;fontSize=13;fontColor=#000000;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="405" target="407" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -67,7 +67,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="407" value="参照画面&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;span style=&quot;text-align: left; font-size: 13px;&quot;&gt;hasura-sub.tsx&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=13;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="380" y="890" width="120" height="80" as="geometry"/>
+                    <mxGeometry x="440" y="890" width="120" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="423" value="&lt;p class=&quot;p1&quot; style=&quot;margin: 0px ; font-stretch: normal ; font-size: 13px ; line-height: normal&quot;&gt;処理フロー図&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;spacingLeft=5;align=left;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="40" y="680" width="760" height="40" as="geometry"/>
