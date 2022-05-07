@@ -23,9 +23,9 @@
 - GraphQL
 - GraphQL codegen
 - GraphQL response mock by MSW
-- PostgreSQL
 
 ## インフラ
 
 - Vercel
 - Hasura Cloud
+- PostgreSQL
