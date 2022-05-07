@@ -26,7 +26,7 @@ interface Props {
  * @param delete_users_by_pk 親GraphQL-Delete関数を子が実行
  * @param setEditedUser 親State更新関数を子が実行、親State更新、親編集ﾓｰﾄﾞ通知
  * @returns ﾕｰｻﾞｰｱｲﾃﾑｺﾝﾎﾟｰﾈﾝﾄ
- * @description MEMO化することで受取Propsに変化がなければ再ﾚﾝﾀﾞﾘﾝｸﾞさせない
+ * @description Memo化することで受取Propsに変化がなければ再ﾚﾝﾀﾞﾘﾝｸﾞさせない
  * @description yarn buildでのmissing display name error対応のためESLint無効化ｺﾒﾝﾄ導入
  */
 // eslint-disable-next-line react/display-name
