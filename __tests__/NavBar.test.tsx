@@ -8,7 +8,6 @@ import { getPage, initTestHelpers } from 'next-page-tester'
 import { setupServer } from 'msw/node'
 import { handlers } from '../mock/handlers'
 import 'setimmediate'
-import { waitFor } from '@testing-library/react'
 
 /** Hasuraｴﾝﾄﾞﾎﾟｲﾝﾄ用環境変数定義 */
 process.env.NEXT_PUBLIC_HASURA_URL =
@@ -44,9 +43,7 @@ describe('Navigation Test Cases', () => {
     const { page } = await getPage({
       route: '/',
     })
-    await waitFor(() => {
-      render(page)
-    })
+    render(page)
     expect(await screen.findByText('Next.js + GraphQL')).toBeInTheDocument()
     // makevar-navﾓｯｸｸﾘｯｸﾃｽﾄ
     userEvent.click(screen.getByTestId('makevar-nav'))
