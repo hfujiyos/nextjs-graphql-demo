@@ -7,6 +7,7 @@ import { setupServer } from 'msw/node'
 import { getPage, initTestHelpers } from 'next-page-tester'
 import { handlers } from '../mock/handlers'
 import 'setimmediate'
+import { waitFor } from '@testing-library/react'
 
 /** Hasuraｴﾝﾄﾞﾎﾟｲﾝﾄ用環境変数定義 */
 process.env.NEXT_PUBLIC_HASURA_URL =
@@ -35,7 +36,9 @@ describe('Hasura CRUD Test Cases', () => {
     const { page } = await getPage({
       route: '/hasura-crud',
     })
-    render(page)
+    await waitFor(() => {
+      render(page)
+    })
     expect(await screen.findByText('Hasura CRUD')).toBeInTheDocument()
     expect(await screen.findByText('Test user A')).toBeInTheDocument()
     expect(
