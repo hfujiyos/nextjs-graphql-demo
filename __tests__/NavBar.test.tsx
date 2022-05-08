@@ -9,6 +9,10 @@ import { setupServer } from 'msw/node'
 import { handlers } from '../mock/handlers'
 import 'setimmediate'
 
+/** Hasuraｴﾝﾄﾞﾎﾟｲﾝﾄ用環境変数定義 */
+process.env.NEXT_PUBLIC_HASURA_URL =
+  'https://huge-jackal-38.hasura.app/v1/graphql'
+
 // 初期化処理（next-page-tester）
 initTestHelpers()
 
@@ -50,9 +54,11 @@ describe('Navigation Test Cases', () => {
     // crud-navﾓｯｸｸﾘｯｸﾃｽﾄ
     userEvent.click(screen.getByTestId('crud-nav'))
     expect(await screen.findByText('Hasura CRUD')).toBeInTheDocument()
-    // // ssg-navﾓｯｸｸﾘｯｸﾃｽﾄ（数度に一度しかﾓｯｸﾃｽﾄが成功しないﾃｽﾄｺｰﾄﾞのため一旦ｺﾒﾝﾄｱｳﾄ）
+    // 2022/05/07 DEL(S) 数度に一度しかﾓｯｸﾃｽﾄが成功しないﾃｽﾄｺｰﾄﾞのためｺﾒﾝﾄｱｳﾄ
+    // //ssg-navﾓｯｸｸﾘｯｸﾃｽﾄ
     // userEvent.click(screen.getByTestId('ssg-nav'))
     // expect(await screen.findByText('SSG+ISR')).toBeInTheDocument()
+    // 2022/05/07 DEL(E)
     // memo-navﾓｯｸｸﾘｯｸﾃｽﾄ
     userEvent.click(screen.getByTestId('memo-nav'))
     expect(

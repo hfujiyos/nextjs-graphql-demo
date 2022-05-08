@@ -8,6 +8,10 @@ import { getPage, initTestHelpers } from 'next-page-tester'
 import { handlers } from '../mock/handlers'
 import 'setimmediate'
 
+/** Hasuraｴﾝﾄﾞﾎﾟｲﾝﾄ用環境変数定義 */
+process.env.NEXT_PUBLIC_HASURA_URL =
+  'https://huge-jackal-38.hasura.app/v1/graphql'
+
 // 初期化処理（next-page-tester）
 initTestHelpers()
 

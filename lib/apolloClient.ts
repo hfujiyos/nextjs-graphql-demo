@@ -6,8 +6,10 @@ import {
 } from '@apollo/client'
 import 'cross-fetch/polyfill'
 
-/** SSR用環境変数定義 */
-export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__'
+// 2022/05/08 DEL(S) 使用しないためｺﾒﾝﾄｱｳﾄ
+// /** SSR用環境変数定義 */
+// export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__'
+// 2022/05/08 DEL(E)
 
 /** ApolloClient定義 */
 let apolloClient: ApolloClient<NormalizedCacheObject> | undefined
@@ -18,12 +20,16 @@ let apolloClient: ApolloClient<NormalizedCacheObject> | undefined
  * @returns ssrMode｜SSRはTrue、CSRはFalse
  * @returns link｜Hasuraのｴﾝﾄﾞﾎﾟｲﾝﾄを設定
  * @returns cache｜InMemoryCache
+ * @description linkのuriとheadersは環境変数.env.localから取得
  */
 const createApolloClient = () => {
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({
-      uri: 'https://huge-jackal-38.hasura.app/v1/graphql',
+      uri: process.env.NEXT_PUBLIC_HASURA_URL,
+      headers: {
+        'x-hasura-admin-secret': process.env.NEXT_PUBLIC_HASURA_KEY,
+      },
     }),
     cache: new InMemoryCache(),
   })
