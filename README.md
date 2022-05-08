@@ -27,6 +27,7 @@
 
 ## インフラ
 
+- GitHub
 - Vercel
 - Hasura Cloud
 - PostgreSQL
